@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		575AD6F726480EF400E6AD6C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575AD6F626480EF400E6AD6C /* AppDelegate.swift */; };
 		575AD6F926480EF400E6AD6C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575AD6F826480EF400E6AD6C /* SceneDelegate.swift */; };
-		575AD6FB26480EF400E6AD6C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575AD6FA26480EF400E6AD6C /* ViewController.swift */; };
+		575AD6FB26480EF400E6AD6C /* VC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575AD6FA26480EF400E6AD6C /* VC.swift */; };
 		575AD6FE26480EF400E6AD6C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575AD6FC26480EF400E6AD6C /* Main.storyboard */; };
 		575AD70026480EF400E6AD6C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 575AD6FF26480EF400E6AD6C /* Assets.xcassets */; };
 		575AD70326480EF400E6AD6C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 575AD70126480EF400E6AD6C /* LaunchScreen.storyboard */; };
+		575AD70C26480F1C00E6AD6C /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 575AD70B26480F1C00E6AD6C /* UserModel.swift */; };
+		57C1086326485F1E0029E6B0 /* SqlTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1086226485F1E0029E6B0 /* SqlTableViewCell.swift */; };
+		57C10868264890C40029E6B0 /* VCPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C10867264890C40029E6B0 /* VCPresenter.swift */; };
+		57C1086B264891450029E6B0 /* VCProtocols.swift in Sources */ = {isa = PBXBuildFile; fileRef = 57C1086A264891450029E6B0 /* VCProtocols.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		575AD6F326480EF400E6AD6C /* Sqlite_CRUD.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sqlite_CRUD.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		575AD6F626480EF400E6AD6C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		575AD6F826480EF400E6AD6C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		575AD6FA26480EF400E6AD6C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		575AD6FA26480EF400E6AD6C /* VC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VC.swift; sourceTree = "<group>"; };
 		575AD6FD26480EF400E6AD6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		575AD6FF26480EF400E6AD6C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		575AD70226480EF400E6AD6C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		575AD70426480EF400E6AD6C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		575AD70B26480F1C00E6AD6C /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		57C1086226485F1E0029E6B0 /* SqlTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SqlTableViewCell.swift; sourceTree = "<group>"; };
+		57C10867264890C40029E6B0 /* VCPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCPresenter.swift; sourceTree = "<group>"; };
+		57C1086A264891450029E6B0 /* VCProtocols.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCProtocols.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +64,59 @@
 		575AD6F526480EF400E6AD6C /* Sqlite_CRUD */ = {
 			isa = PBXGroup;
 			children = (
+				57C10865264890890029E6B0 /* Storayborad */,
+				57C10864264890790029E6B0 /* View */,
+				57C10866264890930029E6B0 /* Presenter */,
+				575AD70A26480F0D00E6AD6C /* Model */,
 				575AD6F626480EF400E6AD6C /* AppDelegate.swift */,
 				575AD6F826480EF400E6AD6C /* SceneDelegate.swift */,
-				575AD6FA26480EF400E6AD6C /* ViewController.swift */,
-				575AD6FC26480EF400E6AD6C /* Main.storyboard */,
 				575AD6FF26480EF400E6AD6C /* Assets.xcassets */,
 				575AD70126480EF400E6AD6C /* LaunchScreen.storyboard */,
 				575AD70426480EF400E6AD6C /* Info.plist */,
 			);
 			path = Sqlite_CRUD;
+			sourceTree = "<group>";
+		};
+		575AD70A26480F0D00E6AD6C /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				575AD70B26480F1C00E6AD6C /* UserModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		57C10864264890790029E6B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				575AD6FA26480EF400E6AD6C /* VC.swift */,
+				57C1086C264891880029E6B0 /* TableviewCell */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		57C10865264890890029E6B0 /* Storayborad */ = {
+			isa = PBXGroup;
+			children = (
+				575AD6FC26480EF400E6AD6C /* Main.storyboard */,
+			);
+			path = Storayborad;
+			sourceTree = "<group>";
+		};
+		57C10866264890930029E6B0 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				57C10867264890C40029E6B0 /* VCPresenter.swift */,
+				57C1086A264891450029E6B0 /* VCProtocols.swift */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		57C1086C264891880029E6B0 /* TableviewCell */ = {
+			isa = PBXGroup;
+			children = (
+				57C1086226485F1E0029E6B0 /* SqlTableViewCell.swift */,
+			);
+			path = TableviewCell;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +189,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				575AD6FB26480EF400E6AD6C /* ViewController.swift in Sources */,
+				575AD6FB26480EF400E6AD6C /* VC.swift in Sources */,
+				57C1086326485F1E0029E6B0 /* SqlTableViewCell.swift in Sources */,
 				575AD6F726480EF400E6AD6C /* AppDelegate.swift in Sources */,
+				575AD70C26480F1C00E6AD6C /* UserModel.swift in Sources */,
 				575AD6F926480EF400E6AD6C /* SceneDelegate.swift in Sources */,
+				57C1086B264891450029E6B0 /* VCProtocols.swift in Sources */,
+				57C10868264890C40029E6B0 /* VCPresenter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
